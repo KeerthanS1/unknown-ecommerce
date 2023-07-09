@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import React from "react";
 
@@ -6,7 +7,7 @@ const products = [
   {
     id: 1,
     name: "Basic Tee",
-    href: "#",
+    href: "/product/1",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
@@ -16,7 +17,7 @@ const products = [
   {
     id: 2,
     name: "Basic Tee",
-    href: "#",
+    href: "/product/2",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
@@ -26,7 +27,7 @@ const products = [
   {
     id: 3,
     name: "Basic Tee",
-    href: "#",
+    href: "/product/3",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
@@ -36,7 +37,7 @@ const products = [
   {
     id: 4,
     name: "Basic Tee",
-    href: "#",
+    href: "/product/4",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     imageAlt: "Front of men's Basic Tee in black.",
@@ -70,10 +71,10 @@ const Home = () => {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-md font-semibold text-gray-700">
-                    <a href={product.href}>
+                    <Link href={product.href}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.name}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                 </div>
